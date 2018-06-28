@@ -1,0 +1,109 @@
+# depslib dependency file v1.0
+1529535706 source:d:\mg\primerfinalprog\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529446952 d:\mg\primerfinalprog\arraylist.h
+
+1529552904 source:d:\mg\primerfinalprog\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Cliente.h"
+	"controller.h"
+	"parser.h"
+	"utn.h"
+
+1529550896 source:d:\mg\primerfinalprog\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Cliente.h"
+	<string.h>
+
+1529550854 d:\mg\primerfinalprog\cliente.h
+
+1529448480 source:d:\mg\primerfinalprog\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1529448480 d:\mg\primerfinalprog\utn.h
+
+1529617009 source:d:\mg\primerfinalprog\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"utn.h"
+	"cliente.h"
+
+1529550532 d:\mg\primerfinalprog\controller.h
+
+1529020422 d:\mg\primerfinalprog\parser.h
+
+1529449338 source:d:\mg\primerfinalprog\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+
+1529449476 source:d:\mg\primerfinalprog\venta.c
+
+1529535704 source:c:\users\martin\desktop\mg\mg\primerfinalprog\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529446951 c:\users\martin\desktop\mg\mg\primerfinalprog\arraylist.h
+
+1529550894 source:c:\users\martin\desktop\mg\mg\primerfinalprog\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Cliente.h"
+	<string.h>
+
+1529550853 c:\users\martin\desktop\mg\mg\primerfinalprog\cliente.h
+
+1529551067 source:c:\users\martin\desktop\mg\mg\primerfinalprog\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Cliente.h"
+	"controller.h"
+	"parser.h"
+	"utn.h"
+
+1529550530 c:\users\martin\desktop\mg\mg\primerfinalprog\controller.h
+
+1529020422 c:\users\martin\desktop\mg\mg\primerfinalprog\parser.h
+
+1529448479 c:\users\martin\desktop\mg\mg\primerfinalprog\utn.h
+
+1529449336 source:c:\users\martin\desktop\mg\mg\primerfinalprog\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+
+1529448479 source:c:\users\martin\desktop\mg\mg\primerfinalprog\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1529449474 source:c:\users\martin\desktop\mg\mg\primerfinalprog\venta.c
+
+1529551203 source:c:\users\martin\desktop\mg\mg\primerfinalprog\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"utn.h"
+	"cliente.h"
+

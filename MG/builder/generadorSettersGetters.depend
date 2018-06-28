@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1529614300 source:c:\users\martin\desktop\mg\practicamg-master\mg\builder\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529614300 c:\users\martin\desktop\mg\practicamg-master\mg\builder\arraylist.h
+
+1529614300 source:c:\users\martin\desktop\mg\practicamg-master\mg\builder\generador.c
+	"generador.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"ArrayList.h"
+	<ctype.h>
+
+1529614300 c:\users\martin\desktop\mg\practicamg-master\mg\builder\generador.h
+	"ArrayList.h"
+
+1529614300 c:\users\martin\desktop\mg\practicamg-master\mg\builder\utn.h
+
+1529614300 source:c:\users\martin\desktop\mg\practicamg-master\mg\builder\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"generador.h"
+	"utn.h"
+	"ArrayList.h"
+
+1529614300 source:c:\users\martin\desktop\mg\practicamg-master\mg\builder\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
