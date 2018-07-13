@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1530215492 source:d:\mg pal parcial\final\depositos\final depositos\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529614300 d:\mg pal parcial\final\depositos\final depositos\arraylist.h
+
+1531440926 source:d:\mg pal parcial\final\depositos\final depositos\depositos.c
+	"depositos.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1531433968 d:\mg pal parcial\final\depositos\final depositos\depositos.h
+
+1531443169 source:d:\mg pal parcial\final\depositos\final depositos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Parser.h"
+	"depositos.h"
+	"utn.h"
+
+1531434705 d:\mg pal parcial\final\depositos\final depositos\parser.h
+	"ArrayList.h"
+
+1531443314 source:d:\mg pal parcial\final\depositos\final depositos\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"depositos.h"
+	"arrayList.h"
+
+1531277502 source:d:\mg pal parcial\final\depositos\final depositos\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1529884992 d:\mg pal parcial\final\depositos\final depositos\utn.h
+
