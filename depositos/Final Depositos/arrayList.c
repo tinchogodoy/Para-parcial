@@ -388,7 +388,6 @@ int al_map(ArrayList* this, int (*pFunc)(void*))
         {
             pFunc(al_get(this,i));
         }
-
     }
     return returnAux;
 }

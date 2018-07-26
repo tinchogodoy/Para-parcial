@@ -85,6 +85,17 @@ int depositos_setCantidad(Depositos* this,char* cantidad)
     return retorno;
 }
 
+int depositos_setCantidadInt(Depositos* this,int* cantidad)
+{
+    int retorno=-1;
+    if(this!=NULL)
+    {
+        this->cantidad=cantidad;
+        retorno=0;
+    }
+    return retorno;
+}
+
 int depositos_getCantidad(Depositos* this,int* cantidad)
 {
     int retorno=-1;

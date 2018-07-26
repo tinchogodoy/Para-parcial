@@ -14,7 +14,7 @@ int main()
     int menuOpcionElegida;
     int menu;
     char menuPrinsipalMensaje[] =
-                "   \n1. Cargar depositos\
+                "   \n\n1. Cargar depositos\
                     \n2. Listar productos de deposito\
                     \n3. Mover productos a deposito\
                     \n4. Descontar productos de depositos\
@@ -33,7 +33,7 @@ int main()
         {
         case 1:
             //printf("\n\tALTA CLIENTE:\n");
-            if(parser_parseDepositos("dep0.csv",listaDeposito1)==1 && parser_parseDepositos("dep1.csv",listaDeposito2)==1)
+            if(parser_parseDepositos("dep3.csv",listaDeposito1)==1 && parser_parseDepositos("dep4.csv",listaDeposito2)==1)
 
             break;
         case 2:
@@ -50,21 +50,34 @@ int main()
             break;
         case 3:
             //printf("\n\tBAJA CLIENTE:\n");
-            parser_moverDepositos(listaDeposito1,listaDeposito2);
-
+            if(parser_moverDepositos(listaDeposito1,listaDeposito2))
+            {
+                parser_guardarArchivosDepositos("dep3.csv",listaDeposito1);
+                parser_guardarArchivosDepositos("dep4.csv",listaDeposito2);
+            }
 
             break;
         case 4:
             //printf("\n\tLISTAR CLIENTES:\n");
-            parser_descontarProductos(listaDeposito1,listaDeposito2);
+            if(parser_descontarProductos(listaDeposito1,listaDeposito2))
+            {
+                parser_guardarArchivosDepositos("dep3.csv",listaDeposito1);
+                parser_guardarArchivosDepositos("dep4.csv",listaDeposito2);
+            }
 
             break;
         case 5:
             //printf("\n\tREALIZAR UNA VENTA:\n");
+            if((parser_agregarProductos(listaDeposito1,listaDeposito2))==0)
+            {
+                parser_guardarArchivosDepositos("dep3.csv",listaDeposito1);
+                parser_guardarArchivosDepositos("dep4.csv",listaDeposito2);
+            }
 
             break;
         case 6:
-
+                parser_guardarArchivosDepositos("dep3.csv",listaDeposito1);
+                parser_guardarArchivosDepositos("dep4.csv",listaDeposito2);
             exit(1);
             break;
         default:

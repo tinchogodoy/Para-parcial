@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "depositos.h"
 #include "arrayList.h"
 
@@ -46,42 +47,11 @@ int parser_parseDepositos(char* path, ArrayList* listaDepositos)
     if(pFile != NULL)
     {
         retorno = 1;
-        fscanf(pFile," %[^,],%[^,],%[^\n]\n",\
-                    bIdProducto,
-                    bDescripcion,
-                    bCantidad
-                   /* bDni
-                    bEmail,
-                    bGenero,
-                    bProfesion,
-                    bUsuario,
-                    bNacionalidad*/
-                    );
+        fscanf(pFile," %[^,],%[^,],%[^\n]\n", bIdProducto, bDescripcion, bCantidad);
         while(!feof(pFile))
         {
-            fscanf(pFile,"  %[^,],%[^,],%[^\n]\n",\
-                                bIdProducto,
-                                bDescripcion,
-                                bCantidad
-                              /*bDni,
-                                bEmail,
-                                bGenero,
-                                bProfesion,
-                                bUsuario,
-                                bNacionalidad*/
-                                );
-
-            auxDepositos = depositos_newParametros(     //atoi(bId),
-                                                bIdProducto,
-                                                bDescripcion,
-                                                bCantidad
-                                                //atoi(bHorasTrabajadas)
-                                            /*  bEmail,
-                                                bGenero,
-                                                bProfesion,
-                                                bNacionalidad,
-                                                bUsuario,*/
-                                                );
+            fscanf(pFile,"  %[^,],%[^,],%[^\n]\n", bIdProducto, bDescripcion, bCantidad);
+            auxDepositos = depositos_newParametros( bIdProducto, bDescripcion, bCantidad);
             al_add(listaDepositos,auxDepositos);
             i++;
         }
@@ -266,14 +236,12 @@ int parser_descontarProductos(ArrayList* listaDeposito1, ArrayList* listaDeposit
     Depositos* auxDepositos;
     int retorno = -1;
     int id;
-    int cant;
+    char cant;
+    int cantidad;
     int descontar;
     int IdProducto;
     char descripcion[64];
-    int cantidad;
     int exito;
-    int depOrigen;
-    int depDestino;
     int i;
 
     if (listaDeposito1 != NULL && listaDeposito2 != NULL)
@@ -289,10 +257,10 @@ int parser_descontarProductos(ArrayList* listaDeposito1, ArrayList* listaDeposit
                     if(id == IdProducto)
                     {
                         retorno = 0;
-                        depositos_getCantidad(auxDepositos,cantidad)
+                        depositos_getCantidad(auxDepositos,&cantidad);
                         getValidInt("\nIngrese cantidad a descontar: ","\nIngrese un caracter valido!",&descontar,0,cantidad,2);
-                        cant = cantidad - descontar;
-                        depositos_setCantidad(auxDepositos,cant);
+                        cantidad = cantidad - descontar;
+                        depositos_setCantidadInt(auxDepositos,cantidad);
                         break;
                     }
                 }
@@ -305,17 +273,106 @@ int parser_descontarProductos(ArrayList* listaDeposito1, ArrayList* listaDeposit
                         if(id == IdProducto)
                         {
                             retorno = 0;
-                            getValidInt("\nIngrese el ID: ","\nIngrese un caracter valido!",&descontar,0,depositos_getCantidad(listaDeposito1,cantidad),2);
-                            cant = cantidad - descontar;
-                            depositos_setCantidad(auxDepositos,cant);
+                            depositos_getCantidad(auxDepositos,&cantidad);
+                            getValidInt("\nIngrese cantidad a descontar: ","\nIngrese un caracter valido!",&descontar,0,cantidad,2);
+                            cantidad = cantidad - descontar;
+                            depositos_setCantidadInt(auxDepositos,cantidad);
                             break;
                         }
-                     }
+                      }
                 }
-            }
-
+         }
     }
-   //cliente_delete(auxDepositos);
+    return retorno;
+}
+
+int parser_agregarProductos(ArrayList* listaDeposito1, ArrayList* listaDeposito2)
+{
+    Depositos* auxDepositos;
+    int retorno = -1;
+    int id;
+    char cant;
+    int cantidad;
+    int agregar;
+    int IdProducto;
+    char descripcion[64];
+    int exito;
+    int i;
+
+    if (listaDeposito1 != NULL && listaDeposito2 != NULL)
+    {
+        exito = getValidInt("\nIngrese el ID: ","\nIngrese un caracter valido!",&id,0,1000,2);
+        if (!exito)
+        {
+                for(i=0;i<al_len(listaDeposito1);i++)
+                {
+                    retorno = -2;
+                    auxDepositos = al_get(listaDeposito1,i);
+                    depositos_getIdProducto(auxDepositos,&IdProducto);
+                    if(id == IdProducto)
+                    {
+                        retorno = 0;
+                        depositos_getCantidad(auxDepositos,&cantidad);
+                        getValidInt("\nIngrese cantidad a agregar: ","\nIngrese un caracter valido!",&agregar,0,cantidad,2);
+                        cantidad = cantidad + agregar;
+                        depositos_setCantidadInt(auxDepositos,cantidad);
+                        break;
+                    }
+                }
+                if(retorno==-2)
+                {
+                     for(i=0;i<al_len(listaDeposito2);i++)
+                     {
+                        auxDepositos = al_get(listaDeposito2,i);
+                        depositos_getIdProducto(auxDepositos, &IdProducto);
+                        if(id == IdProducto)
+                        {
+                            retorno = 0;
+                            depositos_getCantidad(auxDepositos,&cantidad);
+                            getValidInt("\nIngrese cantidad a agregar: ","\nIngrese un caracter valido!",&agregar,0,cantidad,2);
+                            cantidad = cantidad + agregar;
+                            depositos_setCantidadInt(auxDepositos,cantidad);
+                            break;
+                        }
+                      }
+                }
+         }
+    }
+    return retorno;
+}
+
+int parser_guardarArchivosDepositos(char* path, ArrayList* listaDepositos)
+{
+    Depositos* auxDepositos;
+    int IdProducto;
+    char descripcion[64];
+    int cantidad;
+    int retorno = -1;
+    int i;
+    FILE* pFile;
+    pFile = fopen(path,"w");
+    if(pFile != NULL)
+    {
+        retorno=1;
+        printf("\nGuardando archivo: %s...\n",path);
+        fprintf(pFile,"producto,descripcion,cantidad\n");
+        for(i=0;i<al_len(listaDepositos);i++)
+        {
+            auxDepositos = al_get(listaDepositos,i);
+            depositos_getIdProducto(auxDepositos,&IdProducto);
+            depositos_getDescripcion(auxDepositos,descripcion);
+            depositos_getCantidad(auxDepositos,&cantidad);
+           // cliente_getEmail(auxDepositos,email);
+           // cliente_getGenero(auxDepositos,&genero);
+          //  cliente_getProfesion(auxDepositos,profesion);
+           // cliente_getNacionalidad(auxDepositos,nacionalidad);
+           // cliente_getUsuario(auxDepositos,usuario);
+            fprintf(pFile,"%d,%s,%d\n",IdProducto,descripcion,cantidad);
+            //fprintf(stdout,"%d,%s,%s,%d\n",id,nombre,apellido,sueldo);
+        }
+    }
+    fclose(pFile);
+    printf("\nArchivo: %s guardado!\n",path);
     return retorno;
 }
 

@@ -26,7 +26,7 @@
 1531434705 d:\mg pal parcial\final\depositos\final depositos\parser.h
 	"ArrayList.h"
 
-1531443314 source:d:\mg pal parcial\final\depositos\final depositos\parser.c
+1531443888 source:d:\mg pal parcial\final\depositos\final depositos\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"depositos.h"
@@ -40,4 +40,47 @@
 	"utn.h"
 
 1529884992 d:\mg pal parcial\final\depositos\final depositos\utn.h
+
+1530215492 source:c:\users\martin\desktop\mg pal parcial\depositos\final depositos\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529614300 c:\users\martin\desktop\mg pal parcial\depositos\final depositos\arraylist.h
+
+1531449062 source:c:\users\martin\desktop\mg pal parcial\depositos\final depositos\depositos.c
+	"depositos.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1531433970 c:\users\martin\desktop\mg pal parcial\depositos\final depositos\depositos.h
+
+1531453370 source:c:\users\martin\desktop\mg pal parcial\depositos\final depositos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Parser.h"
+	"depositos.h"
+	"utn.h"
+
+1531434706 c:\users\martin\desktop\mg pal parcial\depositos\final depositos\parser.h
+	"ArrayList.h"
+
+1529884992 c:\users\martin\desktop\mg pal parcial\depositos\final depositos\utn.h
+
+1531277502 source:c:\users\martin\desktop\mg pal parcial\depositos\final depositos\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1531453083 source:c:\users\martin\desktop\mg pal parcial\depositos\final depositos\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"depositos.h"
+	"arrayList.h"
 
