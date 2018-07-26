@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1529614300 source:c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529614300 c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\arraylist.h
+
+1529614300 source:c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"ArrayList.h"
+	"Parser.h"
+
+1530206905 c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\empleado.h
+
+1529614300 c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\parser.h
+	"ArrayList.h"
+
+1530209388 source:c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"ArrayList.h"
+
+1529940010 source:c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1529884991 c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\utn.h
+
+1530208107 source:c:\users\martin\desktop\mg\practicamg-master\mg\ejerciciopre2doparcialv2\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Empleado.h"
+	"utn.h"
+

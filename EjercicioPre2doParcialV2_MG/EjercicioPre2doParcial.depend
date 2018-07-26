@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1530215490 source:c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529614300 c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\arraylist.h
+
+1530208107 source:c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Empleado.h"
+	"utn.h"
+
+1530206905 c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\empleado.h
+
+1529884991 c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\utn.h
+
+1530213332 source:c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"ArrayList.h"
+	"Parser.h"
+
+1529614300 c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\parser.h
+	"ArrayList.h"
+
+1530213747 source:c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"ArrayList.h"
+
+1529940010 source:c:\users\martin\desktop\mg pal parcial\practicamg-master\mg\ejerciciopre2doparcialv2_mg\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
